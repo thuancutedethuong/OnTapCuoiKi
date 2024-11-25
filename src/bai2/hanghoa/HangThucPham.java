@@ -64,6 +64,6 @@ public class HangThucPham extends HangHoa{
     @Override
     public String toString() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        return super.toString() + " | " + nhaCungCap + " | " + dtf.format(ngaySanXuat) + " | " + dtf.format(ngayHetHan);
+        return super.toString() + String.format(" %-15s", nhaCungCap) + " | " + dtf.format(ngaySanXuat) + " | " + dtf.format(ngayHetHan);
     }
 }

@@ -21,6 +21,10 @@ public abstract class HangHoa {
         this.setSoLuong(soLuong);
     }
 
+    public String getMaHang() {
+        return maHang;
+    }
+
     public String getTenHang() {
         return tenHang;
     }
@@ -59,6 +63,6 @@ public abstract class HangHoa {
     @Override
     public String toString() {
         DecimalFormat df = new DecimalFormat("#,##0 VNĐ");
-        return String.format("| %s | %s | %s | %d", maHang, tenHang, donGia, soLuong);
+        return String.format("| %s | %-15s | %-15s | %d |", maHang, tenHang, df.format(donGia), soLuong);
     }
 }

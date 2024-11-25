@@ -52,6 +52,6 @@ public class HangSanhSu extends HangHoa{
     @Override
     public String toString() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        return super.toString() + " | " + nhaSanXuat + " | " + dtf.format(ngayNhapKho);
+        return super.toString() +String.format(" %-15s", nhaSanXuat) + " | " + dtf.format(ngayNhapKho);
     }
 }
